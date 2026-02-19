@@ -1,0 +1,131 @@
+/* ============================================================
+   WHERE IN THE WORLD — Animations
+   ============================================================ */
+
+/* Shimmer sweep across image */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Progress dot pulse */
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 212, 255, 0.6); transform: scale(1.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 212, 255, 1); transform: scale(1.5); }
+}
+
+/* Globe glow ring pulse */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scaleX(1); }
+  50% { opacity: 1; transform: translateX(-50%) scaleX(1.1); }
+}
+
+/* Loading globe spin */
+@keyframes spin-globe {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Trophy bounce on game over */
+@keyframes trophy-bounce {
+  0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(1.2) rotate(5deg); opacity: 1; }
+  80% { transform: scale(0.95) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Country chip pop in */
+@keyframes chip-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Reveal card entrance */
+@keyframes reveal-card-in {
+  0% { transform: translateY(20px) scale(0.95); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Floating animation for title icon */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.title-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse ring around highlighted country label */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Starfield twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Next button idle pulse */
+@keyframes btn-idle-pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(245, 200, 66, 0.4), 0 2px 8px rgba(0,0,0,0.3); }
+  50% { box-shadow: 0 4px 32px rgba(245, 200, 66, 0.7), 0 2px 8px rgba(0,0,0,0.3); }
+}
+
+.next-btn:not(.hidden) {
+  animation: btn-idle-pulse 2.5s ease-in-out infinite;
+}
+
+.next-btn:hover {
+  animation: none;
+}
+
+/* Globe container entrance shadow */
+@keyframes globe-shadow-grow {
+  0% { box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+  100% { box-shadow: 0 0 60px rgba(0, 212, 255, 0.3), 0 0 120px rgba(0, 212, 255, 0.1); }
+}
+
+/* Country highlight flash */
+@keyframes country-flash {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  60% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Confetti-like particles (CSS only, decorative) */
+@keyframes particle-float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Image frame border glow on load */
+@keyframes frame-glow-in {
+  0% { border-color: rgba(245, 200, 66, 0); box-shadow: none; }
+  100% { border-color: rgba(245, 200, 66, 0.2); box-shadow: 0 0 0 1px rgba(245, 200, 66, 0.1), 0 20px 60px rgba(0,0,0,0.6), 0 0 80px rgba(245, 200, 66, 0.08); }
+}
+
+.image-frame {
+  animation: frame-glow-in 0.8s ease forwards;
+}
+
+/* Reveal overlay card animation */
+.reveal-card {
+  animation: reveal-card-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Staggered chip animations */
+.game-over-country-chip:nth-child(1) { animation-delay: 0.1s; }
+.game-over-country-chip:nth-child(2) { animation-delay: 0.2s; }
+.game-over-country-chip:nth-child(3) { animation-delay: 0.3s; }
+.game-over-country-chip:nth-child(4) { animation-delay: 0.4s; }
+.game-over-country-chip:nth-child(5) { animation-delay: 0.5s; }
+.game-over-country-chip:nth-child(6) { animation-delay: 0.6s; }
+.game-over-country-chip:nth-child(7) { animation-delay: 0.7s; }
+.game-over-country-chip:nth-child(8) { animation-delay: 0.8s; }
+.game-over-country-chip:nth-child(9) { animation-delay: 0.9s; }
+.game-over-country-chip:nth-child(10) { animation-delay: 1.0s; }

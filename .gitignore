@@ -1,0 +1,6 @@
+node_modules
+dist
+.DS_Store
+
+# Images are not included in the repo — add your own (see IMAGE_GUIDE.md)
+public/images/

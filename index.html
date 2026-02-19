@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where in the World? 🌍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <link rel="stylesheet" href="/src/styles/animations.css" />
+</head>
+<body class="phase-image-display">
+
+  <!-- Stars background -->
+  <div class="stars-bg" id="starsBg"></div>
+
+  <!-- Progress dots -->
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-dots" id="progressDots"></div>
+    <div class="round-label" id="roundLabel">Round 1 of 10</div>
+  </div>
+
+  <!-- Title bar -->
+  <div class="title-bar">
+    <span class="title-icon">🌍</span>
+    <span class="title-text">Where in the World?</span>
+  </div>
+
+  <!-- Main game area -->
+  <div class="game-area" id="gameArea">
+
+    <!-- Image container -->
+    <div class="image-container" id="imageContainer">
+      <div class="image-frame" id="imageFrame">
+        <img class="round-image" id="roundImage" src="" alt="Cultural clue" />
+        <div class="image-shimmer"></div>
+      </div>
+      <div class="image-caption" id="imageCaption">What country or culture is this from?</div>
+    </div>
+
+    <!-- Globe wrapper (starts peeking at bottom) -->
+    <div class="globe-wrapper" id="globeOuter">
+      <div class="globe-slider" id="globeWrapper">
+        <div class="globe-container" id="globeContainer"></div>
+        <div class="globe-glow-ring"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Country reveal overlay -->
+  <div class="reveal-overlay" id="revealOverlay">
+    <div class="reveal-card" id="revealCard">
+      <div class="reveal-flag-emoji" id="revealFlag"></div>
+      <div class="reveal-country-name" id="revealCountryName"></div>
+      <div class="reveal-fun-fact" id="revealFunFact"></div>
+    </div>
+  </div>
+
+  <!-- Next button -->
+  <button class="next-btn" id="nextBtn">
+    <span class="next-btn-text">Next</span>
+    <span class="next-btn-icon">→</span>
+    <span class="next-btn-hint">or press Enter</span>
+  </button>
+
+  <!-- Game over screen -->
+  <div class="game-over-screen" id="gameOverScreen">
+    <div class="game-over-content">
+      <div class="game-over-emoji">🏆</div>
+      <h1 class="game-over-title">That's a Wrap!</h1>
+      <p class="game-over-subtitle">You've traveled the world in 10 rounds</p>
+      <div class="game-over-countries" id="gameOverCountries"></div>
+      <button class="restart-btn" id="restartBtn">Play Again 🌍</button>
+    </div>
+  </div>
+
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-globe">🌍</div>
+    <div class="loading-text">Loading the world…</div>
+    <div class="loading-bar"><div class="loading-bar-fill" id="loadingBarFill"></div></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
