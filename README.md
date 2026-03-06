@@ -17,7 +17,7 @@ Built with [globe.gl](https://globe.gl/), Three.js, GSAP, and Vite.
 ### 1. Clone & install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/where_in_the_world.git
+git clone https://github.com/Daksh-T/where_in_the_world.git
 cd where_in_the_world
 npm install
 ```
